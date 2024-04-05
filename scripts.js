@@ -16,7 +16,7 @@ class Book {
     myLibrary.push(this);
   }
 
-  createCard() {
+  createCard(index) {
     const bookCard = document.createElement('div');
     bookCard.className = 'book-card';
     
@@ -64,7 +64,7 @@ function printBooks() {
   }
   let i = 0;
   for (const book of myLibrary) {
-    book.createCard();
+    book.createCard(i);
     i++;
   }
 }
